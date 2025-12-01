@@ -14,7 +14,6 @@ func main() {
     _ = godotenv.Load()
     configs.InitDB()
 
-    // auto migrate
     db := configs.DB
     err := db.AutoMigrate(
         &models.User{}, &models.Toko{}, &models.Alamat{}, &models.Category{},
